@@ -21,7 +21,7 @@ import java.util.*;
 @Controller
 public class FileController {
 
-    @RequestMapping(value = "/fileSearch",method = RequestMethod.POST)
+    @RequestMapping(value = "/fileSearch",method = RequestMethod.POST,produces = "application/json; charset=utf-8")
     @ResponseBody
     public String fileSearch(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("utf-8");
@@ -46,7 +46,7 @@ public class FileController {
         return json;
     }
 
-    @RequestMapping(value = "/fileClassification",method = RequestMethod.POST)
+    @RequestMapping(value = "/fileClassification",method = RequestMethod.POST,produces = "application/json; charset=utf-8")
     @ResponseBody
     public String fileClassification(HttpServletRequest request, HttpServletResponse response) throws IOException {
         request.setCharacterEncoding("utf-8");
