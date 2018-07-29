@@ -1,5 +1,4 @@
 package com.filemanager.sftp;
-
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -184,17 +183,4 @@ public class SFTPUtil {
         return sftp.ls(directory);
     }
 
-    //上传文件测试
-    public static void main(String[] args) throws SftpException, IOException {
-        SFTPUtil sftp = new SFTPUtil("root", "qwe123456", "118.25.6.121", 22);
-        sftp.login();
-        /*File file = new File("D:\\图片\\t0124dd095ceb042322.jpg");
-        InputStream is = new FileInputStream(file);
-        sftp.upload("基础路径","文件路径", "test_sftp.jpg", is);*/
-        Vector List =sftp.listFiles("/home");
-        for(int i=0;i<List.size();i++){
-            System.out.println(List.get(i));
-        }
-        sftp.logout();
-    }
 }

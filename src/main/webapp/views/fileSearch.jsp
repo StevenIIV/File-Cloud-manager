@@ -9,10 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/easyui/themes/gray/easyui.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/easyui/themes/icon.css">
-    <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/jquery.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/easyui/jquery.easyui.min.js"></script>
+    <%@include file="jscssHeader.jsp"%>
     <title>Main</title>
     <script type="text/javascript"  charset="UTF-8">
         function showList() {

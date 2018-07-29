@@ -18,7 +18,7 @@ public class PageController {
     }
     @RequestMapping(value = "/mainContent")
     public String main(HttpSession httpSession){
-        httpSession.setAttribute("page",1);
+        httpSession.setAttribute("page",0);
         return "mainContent";
     }
     @RequestMapping(value = "/userInfo")
@@ -40,5 +40,10 @@ public class PageController {
     public String fileClassification(HttpSession httpSession){
         httpSession.setAttribute("page",2);
         return "fileClassification";
+    }
+    @RequestMapping(value = "/showcloud")
+    public String showcloud(HttpSession httpSession){
+        httpSession.setAttribute("page",3);
+        return "showCloud";
     }
 }
