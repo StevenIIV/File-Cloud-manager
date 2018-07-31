@@ -16,9 +16,7 @@
 <jsp:include page="mainHeader.jsp">
     <jsp:param name="username" value="${user.username}"></jsp:param>
 </jsp:include>
-    <div data-options="region:'center'">
-
-    </div>
+<jsp:include page="jq.jsp"></jsp:include>
 <%@include file="mainNavigation.jsp"%>
 <%@include file="mainFooter.jsp"%>
 </body>

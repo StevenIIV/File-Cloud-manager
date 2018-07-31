@@ -10,6 +10,17 @@
 <html>
 <head>
     <%@include file="jscssHeader.jsp"%>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cloudtable.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/colResizable-1.5.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/Mousefunction.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#sample2").colResizable({
+                liveDrag:true,
+                gripInnerHtml:"<div class='grip'></div>",
+                draggingClass:"dragging"});
+        });
+    </script>
     <title>文件搜索</title>
     <script type="text/javascript"  charset="UTF-8">
         function showList() {
@@ -29,7 +40,7 @@
                     console.log(data.length+"条数据");
                     for (var i=0;i<data.length;i++){
                         var castList=data[i];
-                        thisListValueStr="<tr><td width='250px'><center>"+castList.fileName+"</center></td><td width='600px'><center>"+castList.filePath+"</center></td><td width='250px'><center>"+castList.fileTime+"</center></td></tr>";
+                        thisListValueStr="<tr><td>"+castList.fileName+"</td><td>"+castList.filePath+"</td><td>"+castList.fileTime+"</td></tr>";
                         $("#result").append(thisListValueStr);
                     }
                 }
@@ -55,16 +66,14 @@
                 </table>
             </center>
         </div>
-        <div id="show" style="display: none;margin-top: 10px;">
+        <div class="refresh" id="show" style="display: none;margin-top: 10px;">
             <center>
-                <table border="1">
-                    <thead>
-                    <tr>
-                        <th>文件名</th>
-                        <th>文件位置</th>
-                        <th>最后修改时间</th>
+                <table id="sample2" class="hui-list-table"style="margin-left: 10px;margin-right: 10px">
+                    <tr class="hui-table-title">
+                        <th width='20%'>文件名</th>
+                        <th width='60%'>文件位置</th>
+                        <th width='20%'>最后修改时间</th>
                     </tr>
-                    </thead>
                     <tbody id="result" style="height: 120px">
                     </tbody>
                 </table>
