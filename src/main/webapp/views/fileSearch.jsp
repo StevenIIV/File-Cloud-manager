@@ -10,7 +10,7 @@
 <html>
 <head>
     <%@include file="jscssHeader.jsp"%>
-    <title>Main</title>
+    <title>文件搜索</title>
     <script type="text/javascript"  charset="UTF-8">
         function showList() {
             $.ajax({

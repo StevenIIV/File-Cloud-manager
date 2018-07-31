@@ -10,7 +10,7 @@
 <html>
 <head>
     <%@include file="jscssHeader.jsp"%>
-    <title>Main</title>
+    <title>个人信息</title>
 </head>
 <body class="easyui-layout">
 <jsp:include page="mainHeader.jsp">

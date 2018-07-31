@@ -3,11 +3,7 @@ package com.springmvc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 @Controller
 public class PageController {
@@ -40,10 +36,5 @@ public class PageController {
     public String fileClassification(HttpSession httpSession){
         httpSession.setAttribute("page",2);
         return "fileClassification";
-    }
-    @RequestMapping(value = "/showcloud")
-    public String showcloud(HttpSession httpSession){
-        httpSession.setAttribute("page",3);
-        return "showCloud";
     }
 }

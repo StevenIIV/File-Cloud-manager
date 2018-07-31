@@ -30,7 +30,7 @@
             else return true;
         }
     </script>
-    <title>Main</title>
+    <title>密码重置</title>
 </head>
 <body class="easyui-layout">
 <jsp:include page="mainHeader.jsp">

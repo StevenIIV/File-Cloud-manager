@@ -1,0 +1,370 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+}
+ul,li{
+	list-style: none;
+}
+body,html{
+	height: 100%;
+}
+.hui-resize-table {
+	width: 100%;
+	font-size: 12px;
+	height: 100%;
+}
+.hui-path{
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #ddd; 
+	padding: 0 36px;
+	color: #858585;
+	position: relative;
+}
+.hui-step{
+	color: #858585;
+}
+.hui-step:hover{
+	color: #3ba79a;
+}
+.hui-arrows{
+	margin-right: 14px;
+}
+.hui-operate{
+	position: absolute;
+	top: 5px;
+	right: 100px;
+}
+.hui-operate img{
+	margin-left: 10px;
+	cursor: pointer;
+}
+.rankBox{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 30px;
+	z-index: 9999;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 5px 0;
+	width: 100px;
+}
+.rankBox li{
+	padding: 3px 20px;
+	cursor: pointer;
+}
+.rankBox li.rankIcon{
+	padding-left: 5px;
+}
+.rankIcon img{
+	vertical-align: middle;
+	margin-left: 0;
+}
+.rankBox li:hover{
+	background: #e8e8e8;
+}
+.hui-none{
+	display: none;
+}
+.hui-ellipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.bground{
+	background: #e3efed !important;
+}
+.boderColor{
+    border-top: 1px solid #d4e8e5 !important;
+	border-bottom: 1px solid #d4e8e5 !important;
+}
+
+.checkbox{
+	background-color: transparent;
+	font-size: 14px;
+	outline: 0 !important;
+	-webkit-appearance: none;
+}
+.checkbox:before{
+	content: '';
+	width: 16px;
+	height: 16px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+.checkbox:checked:before{
+	content:"\2713";
+	font-size: 14px;
+	background: #fff;
+	color: #333;
+	text-align: center;
+	line-height: 16px;
+}
+/*-------文件格式--------*/
+.hui-list-table th{
+	background:linear-gradient(to bottom,#f6f6f6,transparent);
+	border-left: 1px solid #eee;
+	}
+.hui-list-table th,.hui-list-table td {
+	color: #444;
+	padding: 10px;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	text-align: left;
+	position: relative;
+}
+.hui-list-table th:nth-child(1){
+	border: 0;
+	padding-left: 60px;
+}
+.hui-list-table td{
+	color: #858585;
+	background: #fff;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+}
+.hui-list-table td:nth-child(1){
+	padding-left: 60px;
+	color: #000;
+	overflow: initial;
+}
+.hui-checkbox{
+	position: absolute; 
+    top: 8px; 
+    left: 36px; 
+}
+.hui-list-table  .hui-icon-down{
+	color: #3ba79a;
+	cursor: pointer;
+	vertical-align: bottom;
+}
+.hui-list-table .hui-content{
+	padding-left: 40px;
+	position: relative;
+}
+.hui-list-table .hui-file-type{
+	position: absolute;
+	top: -5px;
+	left: 10px;
+	width: 26px;
+	height: 26px;
+}
+.hui-list-table .hui-table-operate{
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+}
+.hui-list-table .hui-table-operate a{
+	color: #3ba79a;
+	margin-right: 6px;
+	cursor: pointer;
+}
+.hui-list-table .hui-moreBox{
+	display: none;
+	position: absolute;
+	top:24px;
+	right: -10px;
+	padding: 5px 0;
+	border: 1px solid #ddd;
+	z-index: 2;
+}
+.hui-list-table .hui-moreBox li{
+	padding: 8px 20px;
+	text-align: center;
+	cursor: default;
+	color: #3ba79a;
+}
+.hui-list-table .hui-moreBox li:hover{
+	background: #e8e8e8;
+}
+.hui-list-table .hui-popup{
+	height: 30px;
+	width: 100%;
+	position: absolute;
+	top: -4px;
+	left: 40px;
+	display: none;
+}
+.hui-list-table .hui-rename{
+	padding: 3px 5px;
+	width: 200px;
+}
+.hui-btn{
+	border: 1px solid #9bafa9;
+	background: #fff;
+	color: #3ba79a;
+	width: 40px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	outline: 0;
+	cursor: pointer;
+}
+.hui-btn img{
+	vertical-align: sub;
+}
+.fileName{
+	cursor: pointer;
+}
+#rightKey,#operate{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	border: 1px solid #ccc;
+	font-size: 12px;
+	display: none;
+}
+#rightKey ul li,#operate ul li{
+	padding: 6px 20px;
+	cursor: default;
+}
+#rightKey ul li:hover,#operate ul li:hover{
+	background: #e8e8e8;
+}
+.refresh{
+	position: relative;
+}
+
+/*图片排序*/
+#sample1{
+	display: none;
+}
+.allChecked{
+	padding-left: 90px;
+	position: relative;
+	height: 36px;
+	line-height: 36px;
+}
+.allChecked img{
+	vertical-align: middle;
+}
+.allChecked .checkbox{
+	position: absolute; 
+    top: 9px; 
+    left:60px; 
+}
+.listBox{
+	padding: 10px 60px 10px 50px;
+	font-size: 0;
+	display: inline-block;
+}
+.listBox-item{
+	width: 110px;
+	height: 150px;
+	text-align: center;
+	margin-left: 10px;
+	margin-bottom: 10px; 
+	display: inline-block;
+	position: relative;
+}
+.listWrap{
+	font-size: 14px;
+	padding:28px 0;
+	border: 2px solid transparent;
+	position: relative;
+}
+.listWrap img{
+	width: 48px;
+	height: 48px;
+}
+.listWrap.active,.listWrap.active:hover{
+	border: 2px solid #40a893
+}
+.listTitle{
+	font-size: 14px;
+	width: 100%;
+	padding: 10px 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.list-checkbox{
+	background-color: transparent;
+	font-size: 14px;
+	outline: 0 !important;
+	-webkit-appearance: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.list-checkbox:before{
+	content:"\2713";
+	width: 16px;
+	height: 16px;
+	color: #fff;
+	background: #99d9cc;
+	display: inline-block;
+	border: 0;
+	border-radius: 0;
+	text-align: center;
+	line-height: 16px;
+}
+.list-checkbox:checked:before{
+	content:"\2713";
+	font-size: 14px;
+	background: #40a893;
+	color: #fff;
+	text-align: center;
+	line-height: 16px;
+}
+.popup{
+	display: none;
+	position: absolute;
+	bottom: 10px;
+	left:-22px;
+	width: 146px;
+	background: #fff;
+}
+.rename{
+	padding: 2px 3px;
+}
+.popup .hui-btn{
+	width: 24px;
+	height: 22px;
+	line-height: 22px;
+	margin-left: 3px;
+}
+.rename{
+	width: 80px;
+}
+/*--滑动块---*/
+.grip {
+	width:0;
+	height:0;
+	position: relative;
+	z-index: 88;
+	cursor: e-resize;
+}
+.grip:hover {
+	border-color:#333 transparent transparent transparent;
+}
+.dragging .grip {
+	border-color:#000 transparent transparent transparent;
+}
+
+.sampleText {
+	position: relative;
+	width: 100%;
+}
+.dotted {
+	background-image: url('../img/dotted.png');
+	background-repeat: repeat-y;
+}
+#sample2Txt {
+	float: right;
+}

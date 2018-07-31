@@ -36,7 +36,7 @@
         </div>
 
         <div id="third" title="云端文件管理" data-options="iconCls:'icon-tip'" style="padding: 10px">
-            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-tip'" style="width: 150px;">云端文件</a>
+            <a href="/web/showCloud" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-tip'" style="width: 150px;">云端文件</a>
             <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-tip'" style="width: 150px;">云端上传</a>
         </div>
     </div>
