@@ -9,7 +9,7 @@
 
 <div region="south" style="height: 30px; padding: 5px; background-color: #666666;" align="center">
     <div>
-        <strong>Yufei Shi 2017-2018 © CopyRight</strong>
+        <strong>StevenIIV 2018-2019 © CopyRight</strong>
     </div>
 </div>
 

@@ -11,5 +11,11 @@ public class sftptest {
         for(int i=0;i<s.size();i++){
             System.out.println(((String[]) s.get(i))[0]+" "+((String[]) s.get(i))[1]);
         }
+        if(ssftp.downloadFile("/User/steven","test_sftp.jpg","D:\\")){
+            System.out.println("ok");
+        }
+        else {
+            System.out.println("no");
+        }
     }
 }

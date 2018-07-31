@@ -31,9 +31,9 @@ public class FileController {
         File[] files=null;
         searchFile.changeTOList(request.getParameter("fileName"),request.getParameter("filePath"));
         files=searchFile.getFileList();
-        for(File f:files){
+        /*for(File f:files){
             System.out.println(f.getName()+" "+f.getAbsolutePath()+" "+new Date(f.lastModified()).toString());
-        }
+        }*/
         List<Map<String,Object>> list=new ArrayList<>();
         for(int i=0;i<files.length;i++){
             Map map=new HashMap();
@@ -58,7 +58,7 @@ public class FileController {
         List<String> list=new ArrayList<>();
         for(String key:map.keySet()){
             list.add(key);
-            System.out.println(key);
+            //System.out.println(key);
         }
         map.put("suffixName",list);
 

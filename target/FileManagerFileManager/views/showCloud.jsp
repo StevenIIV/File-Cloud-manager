@@ -1,6 +1,7 @@
 <%@ page import="com.springmvc.model.User" %>
 <%@ page import="org.springframework.ui.ModelMap" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.UtilTools" %><%--
   Created by IntelliJ IDEA.
   User: acm-27
   Date: 2018/7/8
@@ -13,7 +14,7 @@
     <%@include file="jscssHeader.jsp"%>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/cloudtable.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/colResizable-1.5.min.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/index.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/Mousefunction.js"></script>
     <script type="text/javascript">
         $(function(){
             $("#sample2").colResizable({
@@ -46,20 +47,22 @@
                 <tbody id="tbody">
                 <%
                     for(int i=0;i<list.size();i++){
+                        String filename=((String[]) list.get(i))[0];
+                        String attribute=((String[]) list.get(i))[1];
                 %>
                 <tr>
                     <td>
                         <input type="checkbox" class="hui-checkbox checkbox" name="checked" />
                         <div class="hui-content">
-                            <img class="hui-file-type" src="${pageContext.request.contextPath}/filetype/barcode_result_page_type_apk_icon.png" />
+                            <img class="hui-file-type" src="${pageContext.request.contextPath}/filetype/<%=UtilTools.checkImage(filename)%>" />
                             <div class="hui-popup">
                                 <input type="text" class="hui-rename" />
                                 <button class="hui-btn btn-sure"><img src="${pageContext.request.contextPath}/img/success.png" /></button>
                                 <button class="hui-btn btn-cancel"><img src="${pageContext.request.contextPath}/img/close.png" /></button>
                             </div>
-                            <p class="hui-ellipsis check"><span class="fileName"><%=((String[]) list.get(i))[0]%></span></p>
+                            <p class="hui-ellipsis check"><span class="fileName">&nbsp; <%=filename%></span></p>
                             <div class="hui-table-operate">
-                                <a href="###">下载</a>
+                                <a href="/web/download/<%=i%>">下载</a>
                                 <a href="###">发送</a>
                                 <a href="###" class="more">更多</a>
                                 <ul class="hui-moreBox">
@@ -70,8 +73,7 @@
                         </div>
                     </td>
                     <%
-                        String s=((String[]) list.get(i))[1];
-                        int siz= Integer.parseInt(s.split(" ")[3]);
+                        int siz= Integer.parseInt(attribute.split(" ")[3]);
                         String res="null";
                         if(siz>1024&&siz<1024*1024){
                             siz= (int) Math.ceil((double)siz/1024.0);
@@ -83,7 +85,7 @@
                         }
                     %>
                     <td class="check"><%=res%></td>
-                    <td class="check"><%=s.substring(s.length()-28)%></td>
+                    <td class="check"><%=attribute.substring(attribute.length()-28)%></td>
                 </tr>
                 <%
                     }
