@@ -29,9 +29,9 @@ public class CloudController {
         User user=(User)httpSession.getAttribute("user");
         String username=user.getUsername();
         String path=String.format("/User/%s",username);
-        Sftp sftp=new Sftp("118.25.6.121",22,3000,"root","qwe123456");;
+        Sftp sftp=new Sftp("118.25.6.121",22,3000,"root","qwe123456");
         sftp.login();
-        List list=sftp.ls("/User/steven");
+        List list=sftp.ls(path);
         httpSession.setAttribute("cloudList",list);
         httpSession.setAttribute("page",3);
         sftp.logout();
